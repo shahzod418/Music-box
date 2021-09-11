@@ -1,0 +1,179 @@
+@import "style-atom";
+@import "variables";
+@import "header";
+@import "footer";
+@import "page-description";
+@import "page-pricing";
+@import "page-news";
+@import "page-app";
+@import "page-popular-track";
+@import "page-discography";
+@import "page-similar";
+
+html,
+body {
+  @include normalize;
+
+  background-color: $bg-color-grey;
+  color: $color-grey;
+  font-family: $ff-main;
+  font-size: $fs-main;
+  font-weight: 400;
+  line-height: $lh-main;
+}
+
+body {
+  @include grid-container;
+}
+
+h1 {
+  @include h1-desktop;
+
+  margin: 0;
+}
+
+h2 {
+  @include h2-desktop;
+
+  margin: 0;
+}
+
+h3 {
+  @include h3-desktop;
+}
+
+main {
+  @include grid-column-cover;
+
+  @include grid-container;
+  @include grid-tr-5;
+
+  section {
+    @include grid-column;
+  }
+}
+
+.btn {
+  @include btn;
+}
+
+.ta-center {
+  @include ta-center;
+}
+
+.ta-left {
+  @include ta-left;
+}
+
+@include header-desktop;
+
+@include page-description;
+
+@include page-pricing;
+
+@include page-news;
+
+@include page-app;
+
+@include page-popular-track;
+
+@include page-discography;
+
+@include footer-desktop;
+
+@include page-similar;
+
+@media (max-width: 849px) {
+  @include header-small;
+
+  #page-app {
+    grid-template-columns: auto;
+  }
+
+  #page-popular-track {
+    grid-template-columns: 100%;
+  }
+
+  .track-info {
+    grid-template-columns: 125px minmax(154px, 589px) 25px;
+  }
+}
+
+@media (max-width: 609px) {
+  @include footer-mobile;
+
+  h1 {
+    @include h1-mobile;
+  }
+
+  h2 {
+    @include h2-mobile;
+  }
+
+  h3 {
+    @include h3-mobile;
+
+    font-weight: 700;
+  }
+
+  #page-description {
+
+    form {
+      @include form-mobile;
+      @include flex-container;
+    }
+  }
+
+  .page-artist {
+
+    h1 {
+      margin-top: 25px;
+    }
+  }
+
+  #page-news {
+    @include page-news-mobile;
+
+    h2 {
+      font-size: $fs-h2-mobile;
+      line-height: $lh-h2-mobile;
+    }
+  }
+
+  .btn-artist {
+    margin-right: 100px;
+
+    &:first-of-type {
+      margin-bottom: 24px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 23px;
+    }
+  }
+
+  .discography-item {
+    width: 137px;
+  }
+
+  #page-discography {
+    @include multi-column-list-mobile;
+  }
+
+  #page-similar {
+    @include multi-column-list-mobile;
+  }
+
+  .similar-item {
+    width: 137px;
+  }
+}
+
+@media (max-width: 414px) {
+  @include search-mobile;
+  @include header-mobile;
+
+  #page-description {
+    padding-top: 248px;
+  }
+}

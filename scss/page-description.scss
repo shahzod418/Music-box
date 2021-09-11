@@ -1,0 +1,147 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-description {
+  #page-description {
+    @include container-padding-200;
+
+    color: $color-white;
+    grid-row: 1/2;
+
+    form {
+      @include form-desktop;
+      @include flex-container;
+      @include margin-lr-auto;
+    }
+
+    .btn-artist {
+      @include btn-artist;
+    }
+  }
+
+  .page-artist {
+
+    h1 {
+      margin-bottom: 16px;
+      margin-top: 50px;
+    }
+
+    p {
+      margin-bottom: 48px;
+    }
+  }
+
+  .bg-main::before {
+    @include bg-section;
+
+    background-image: map-get($img, banner);
+  }
+
+  .bg-artist::before {
+    @include bg-section;
+
+    background-image: map-get($img, morten-harket);
+  }
+}
+
+@mixin form-desktop {
+  max-width: 570px;
+
+  input {
+    @include border-none;
+
+    background-color: transparent;
+    border: 2px solid $color-grey;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $color-white;
+    margin: 0 30px 1.5rem 0;
+    min-height: 50px;
+    min-width: 270px;
+    padding-left: 20px;
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+
+  input[type="submit"] {
+    @include border-none;
+    @include uppercase;
+
+    @include btn-active;
+
+    appearance: none;
+    background-color: $color-green;
+    border-radius: 5px;
+    margin: 0;
+    padding: 20px 30px;
+    width: 100%;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px $color-green;
+    }
+  }
+}
+
+@mixin form-mobile {
+
+  input {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@mixin btn-artist {
+  align-items: center;
+  border: 0;
+  display: inline-block;
+  font-size: $fs-page-app-btn;
+  height: 62px;
+  line-height: $lh-main;
+  margin-bottom: 23px;
+  margin-right: 1.5rem;
+  padding: 21px 30px 22px 67px;
+  position: relative;
+  width: 200px;
+
+  &::before {
+    @include btn-image-size;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    filter: invert(100%);
+    left: 31px;
+    position: absolute;
+    top: 21px;
+  }
+
+  &:first-of-type {
+    background-color: $color-purple;
+
+    &::before {
+      background-image: url("../images/play-button.svg");
+    }
+  }
+
+  &:last-of-type {
+    background-color: $color-scarlet;
+
+    &::before {
+      background-image: url("../images/heart.svg");
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $color-white;
+    color: $color-white;
+  }
+}

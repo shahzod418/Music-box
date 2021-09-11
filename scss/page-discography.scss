@@ -1,0 +1,21 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-discography {
+  #page-discography {
+    @include multi-column-list;
+  }
+
+  .discography-item {
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .discography-info {
+    @include multi-column-text;
+  }
+}

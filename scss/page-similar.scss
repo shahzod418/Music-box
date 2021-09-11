@@ -1,0 +1,24 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-similar {
+  #page-similar {
+    @include multi-column-list;
+
+    padding-bottom: 100px;
+  }
+
+  .similar-item {
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .similar-info {
+    @include ta-center;
+    @include multi-column-text;
+  }
+}

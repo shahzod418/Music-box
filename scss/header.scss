@@ -1,0 +1,143 @@
+@import "variables";
+@import "style-atom";
+
+@mixin search {
+
+  #search {
+    @include border-none;
+
+    background-color: $bg-color-dark-grey;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: $color-white;
+    height: 25px;
+    padding: 5px 10px;
+    width: 248px;
+  }
+}
+
+@mixin nav-a-desktop {
+  @include display-block;
+  @include uppercase;
+  @include td-none;
+
+  @include btn-active;
+
+  color: $color-grey;
+  font-size: $fs-li-a-desktop;
+  line-height: $lh-li-a;
+
+  &:hover {
+    color: $color-white;
+    font-size: $fs-li-a-hover;
+  }
+}
+
+@mixin header-desktop {
+
+  header {
+    @include flex-container;
+    @include flex-align-items;
+    @include width-100;
+    @include grid-column;
+
+    @include search;
+
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    top: 25px;
+    z-index: 5;
+
+    span {
+      color: $color-white;
+      font-size: $fs-li-a-mobile;
+    }
+  }
+
+  .navigation-header {
+    @include flex-container;
+    @include flex-align-items;
+
+    img {
+      display: inline-block;
+      padding-right: 16px;
+    }
+
+    a {
+      @include nav-a-desktop;
+
+      color: $color-white;
+    }
+  }
+
+  .navigation-block {
+    @include display-block;
+    @include flex-container;
+
+    margin-left: 90px;
+    margin-right: 90px;
+    row-gap: 3px;
+
+    li {
+      @include ls-none;
+
+      margin-right: 24px;
+      padding: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@mixin header-small {
+
+  header {
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    nav {
+      width: 130px;
+    }
+
+    #search {
+      width: 100%;
+    }
+  }
+
+  .navigation-block {
+    margin: 17px 0 0;
+
+    li {
+      @include width-100;
+
+      a {
+        font-size: $fs-li-a-mobile;
+      }
+    }
+  }
+}
+
+@mixin header-mobile {
+
+  header {
+
+    #search {
+      width: 374px;
+    }
+  }
+}
+
+@mixin nav-a-mobile {
+  font-size: $fs-li-a-mobile;
+}
+
+@mixin search-mobile {
+
+  #search {
+    margin-top: 18px;
+  }
+}

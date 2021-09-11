@@ -1,0 +1,276 @@
+@import "variables";
+
+@mixin h1-desktop {
+  font-size: $fs-h1-desktop;
+  font-weight: 700;
+  line-height: $lh-h1-desktop;
+  text-transform: uppercase;
+}
+
+@mixin h2-desktop {
+  font-size: $fs-h2-desktop;
+  font-weight: 700;
+  line-height: $lh-h2-desktop;
+  text-transform: uppercase;
+}
+
+@mixin h3-desktop {
+  font-size: $fs-h3-desktop;
+  font-weight: 400;
+  line-height: $lh-h3-desktop;
+  text-transform: uppercase;
+}
+
+@mixin h1-mobile {
+  font-size: $fs-h1-mobile;
+  font-weight: 700;
+  line-height: $lh-h1-mobile;
+  text-transform: uppercase;
+}
+
+@mixin h2-mobile {
+  font-size: $fs-h2-mobile;
+  font-weight: 700;
+  line-height: $lh-h2-mobile;
+  text-transform: uppercase;
+}
+
+@mixin h3-mobile {
+  font-size: $fs-h3-mobile;
+  font-weight: 400;
+  line-height: $lh-h3-mobile;
+  text-transform: uppercase;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin capitalize {
+  text-transform: capitalize;
+}
+
+@mixin td-none {
+  text-decoration: none;
+}
+
+@mixin ls-none {
+  list-style: none;
+}
+
+@mixin border-none {
+  border: 0;
+}
+
+@mixin ta-center {
+  text-align: center;
+}
+
+@mixin ta-left {
+  text-align: left;
+}
+
+@mixin ai-center {
+  align-items: center;
+}
+
+@mixin margin-lr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin width-100 {
+  width: 100%;
+}
+
+@mixin height-100 {
+  height: 100%;
+}
+
+@mixin width-height-100 {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin btn-image-size {
+  height: 20px;
+  width: 20px;
+}
+
+@mixin container-padding-200 {
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+
+@mixin container-padding-100 {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin normalize {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin display-block {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-container-nw {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@mixin flex-direction-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-justify-center {
+  justify-content: center;
+}
+
+@mixin flex-align-items {
+  align-items: center;
+}
+
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: minmax(20px, auto) minmax(374px, 1200px) minmax(
+    20px,
+    auto
+  );
+  position: relative;
+  z-index: 0;
+}
+
+@mixin grid-tr-5 {
+  grid-template-rows: repeat(5, min-content);
+}
+
+@mixin grid-column {
+  grid-column: 2 / -2;
+}
+
+@mixin grid-column-cover {
+  grid-column: 1 / -1;
+}
+
+@mixin bg-section {
+  @include width-height-100;
+
+  background-position: center;
+  background-size: cover;
+  content: "";
+  grid-row: 1 / 2;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@mixin bg-subscription {
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin page-news-grid {
+  display: grid;
+  grid-template-rows: 100px 57px 48px auto minmax(64px, 65px) auto;
+}
+
+@mixin page-app-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 600px) 374px;
+}
+
+@mixin btn {
+  @include uppercase;
+  @include td-none;
+  @include width-100;
+
+  @include btn-active;
+
+  background-color: transparent;
+  border: 2px solid $color-white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $color-white;
+  display: block;
+  height: 66px;
+  line-height: 1;
+  padding-bottom: 21px;
+  padding-top: 21px;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+@mixin btn-active {
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@mixin multi-column-list {
+  @include flex-container;
+
+  align-items: flex-start;
+  column-gap: 50px;
+  padding-top: 205px;
+  position: relative;
+  row-gap: 25px;
+
+  h2 {
+    color: $color-white;
+    left: 0;
+    position: absolute;
+    top: 100px;
+  }
+}
+
+@mixin multi-column-text {
+  width: 100%;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    @include capitalize;
+
+    color: $color-white;
+    font-size: $fs-discography-h3;
+    line-height: $lh-discography-h3;
+    margin-top: 18px;
+  }
+
+  p {
+    font-size: $fs-discography-p;
+  }
+}
+
+@mixin multi-column-list-mobile {
+  padding-top: 175px;
+
+  h2 {
+    color: $color-white;
+    left: 0;
+    position: absolute;
+    top: 100px;
+  }
+}

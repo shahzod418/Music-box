@@ -1,0 +1,65 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-popular-track {
+  #page-popular-track {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 25px;
+    padding-top: 100px;
+    grid-template-columns: minmax(374px, 551px) minmax(374px, 551px);
+
+    h2 {
+      color: $color-white;
+      grid-column: 1/-1;
+    }
+  }
+}
+
+  .popular-track {
+    @include flex-container-nw;
+    @include flex-align-items;
+
+    height: 55px;
+
+    img {
+      height: 55px;
+      width: 55px;
+    }
+
+    h3,
+    p {
+      font-size: $fs-popular-tracks;
+      line-height: $lh-popular-tracks;
+      margin: 0;
+      padding: 0;
+    }
+
+    .track-name {
+      grid-area: track-name-and-artist;
+    }
+
+    .track-artist {
+      grid-area: track-name-and-artist;
+      margin-top: 28px;
+    }
+
+    .track-time {
+      grid-area: track-time;
+      padding: 18px 0;
+    }
+  }
+
+  .track-info {
+    display: grid;
+    grid-template-areas: "track-name-and-artist area track-time";
+    grid-template-rows: 55px;
+    height: 55px;
+    margin-left: 15px;
+    grid-template-columns: 125px minmax(154px, 331px) 25px;
+
+    h3 {
+      color: $color-white;
+      margin-top: 9px;
+    }
+  }

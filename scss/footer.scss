@@ -1,0 +1,135 @@
+@import "variables";
+@import "style-atom";
+
+@mixin footer-desktop {
+
+  nav,
+  .footer-item {
+    margin-top: 0;
+    padding: 0;
+
+    li {
+      @include ls-none;
+    }
+
+    a {
+      @include td-none;
+
+      @include btn-active;
+
+      color: $color-grey;
+
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  footer {
+    @include grid-container;
+    @include grid-column-cover;
+
+    grid-template-rows: auto minmax(72px, 75px) auto;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+
+    nav {
+      border-top: 2px solid $color-grey;
+    }
+
+    h2 {
+      color: $color-white;
+      font-size: $fs-footer-h2;
+      line-height: $lh-footer-h2;
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer-block {
+    @include flex-container;
+    @include grid-column;
+
+    grid-row: 1/2;
+    justify-content: space-between;
+  }
+}
+
+.footer-subscribe {
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 19px;
+  grid-template-columns: 26px 22px 12px 19px;
+  grid-template-rows: 27px 20px;
+
+  h2 {
+    grid-column: 1/-1;
+  }
+}
+
+.footer-item {
+  width: 270px;
+}
+
+@each $social in $socials {
+  .icon-#{$social} {
+    background-image: map-get($img, #{$social});
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: map-get($icon-size, #{$social});
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      filter: brightness(5);
+    }
+  }
+}
+
+nav {
+  @include grid-container;
+  @include grid-column-cover;
+
+  grid-row: -1/-2;
+
+  ul {
+    @include grid-column;
+    @include flex-container;
+
+    font-size: $fs-h3-mobile;
+    grid-row: -1/-2;
+    line-height: $lh-h3-mobile;
+    margin-top: 40px;
+    max-width: 438px;
+    padding: 0;
+    row-gap: 16px;
+
+    li {
+      display: block;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
+}
+
+@mixin footer-mobile {
+
+  nav {
+
+    ul {
+
+      li {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-app {
+  #page-app {
+    @include container-padding-100;
+    @include page-app-grid;
+
+    justify-content: space-between;
+
+    h2 {
+      @include ta-center;
+
+      color: $color-white;
+      grid-column: 1/ -1;
+      margin-bottom: 48px;
+    }
+
+    img {
+      grid-column: -1/ -2;
+      grid-row: 2/6;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: $fs-page-app-p;
+    }
+
+    p,
+    a {
+      grid-column: 1/ 2;
+    }
+
+    .btn-app {
+      @include btn-app;
+    }
+  }
+}
+
+@mixin btn-app {
+  @include capitalize;
+
+  background-color: $color-scarlet;
+  border: 0;
+  border-radius: 32px;
+  font-size: $fs-page-app-btn;
+  height: 53px;
+  line-height: $lh-main;
+  padding: 16px 40px;
+  width: 131px;
+
+  &:hover {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $color-scarlet;
+    color: $color-white;
+  }
+}

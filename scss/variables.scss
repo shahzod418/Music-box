@@ -1,0 +1,112 @@
+$width-main: 1200px;
+
+$ff-main: "Roboto", sans-serif;
+
+$lh-main: 1.5;
+$lh-h1-desktop: 90px;
+$lh-h2-desktop: 57px;
+$lh-h3-desktop: 36px;
+$lh-h1-mobile: 45px;
+$lh-h2-mobile: 27px;
+$lh-h3-mobile: 24px;
+$lh-price: 1em;
+$lh-li-a: 16.5px;
+$lh-news-h3: 45px;
+$lh-news-footer-p: 19.2px;
+$lh-footer-h2: 27px;
+$lh-popular-tracks: 19.2px;
+$lh-discography-h3: 27px;
+
+$fs-main: 18px;
+$fs-h1-desktop: 60px;
+$fs-h2-desktop: 38px;
+$fs-h3-desktop: 24px;
+$fs-h1-mobile: 30px;
+$fs-h2-mobile: 18px;
+$fs-h3-mobile: 16px;
+$fs-price: 64px;
+$fs-span: 32px;
+$fs-pricing-footer: 12.8px;
+$fs-footnote: 16px;
+$fs-li-a-desktop: 10px;
+$fs-li-a-mobile: 11px;
+$fs-li-a-hover: 11px;
+$fs-news-h3: 30px;
+$fs-news-footer-p: 12px;
+$fs-page-app-p: 16px;
+$fs-page-app-btn: 12.8px;
+$fs-footer-h2: 18px;
+$fs-popular-tracks: 12.8px;
+$fs-discography-h3: 18px;
+$fs-discography-p: 16px;
+
+$color-light-grey: #e0e0e0;
+$color-grey: #cacaca;
+$color-dark-grey: #3c3b3d;
+$color-black: #08020d;
+$color-green: #34c176;
+$color-orange: #f89202;
+$color-purple: #5328a1;
+$color-scarlet: #95390c;
+$color-white: #ffffff;
+
+$bg-color-light-grey: #e0e0e0;
+$bg-color-grey: #08020d;
+$bg-color-dark-grey: #3c3b3d;
+$bg-color-black: #08020d;
+$bg-color-green: #34c176;
+$bg-color-orange: #f89202;
+$bg-color-purple: #5328a1;
+$bg-color-scarlet: #95390c;
+$bg-color-white: #ffffff;
+
+$img: (
+  a-ha: url("../images/A-ha.png"),
+  avatar: url("../images/avatar.png"),
+  banner: url("../images/banner.png"),
+  brother: url("../images/Brother.png"),
+  chris-rea: url("../images/Chris Rea.png"),
+  duran-duran: url("../images/Duran Duran.png"),
+  facebook: url("../images/Facebook.png"),
+  frank-sinatra: url("../images/Frank Sinatra.png"),
+  google: url("../images/Google+.png"),
+  heart: url("../images/heart.svg"),
+  instagram: url("../images/Instagram.png"),
+  iphone: url("../images/iphone.png"),
+  jack-savoretti: url("../images/Jack Savoretti.png"),
+  keane: url("../images/Keane.png"),
+  letter-from-egypt: url("../images/Letter from Egypt.png"),
+  logo: url("../images/logo.svg"),
+  morten-harket: url("../images/Morten Harket.png"),
+  music-to-be-murdered-by: url("../images/Music to Be Murdered By.png"),
+  ordinary-man: url("../images/Ordinary Man.png"),
+  out-of-my-hands: url("../images/Out of My Hands.png"),
+  paul-young: url("../images/Paul Young.png"),
+  play-button: url("../images/play-button.svg"),
+  poetenes-evangulium: url("../images/Poetenes Evangelium.png"),
+  free: url("../images/subscribe_1.png"),
+  standard: url("../images/subscribe_2.png"),
+  premium: url("../images/subscribe_3.png"),
+  tears-for-fears: url("../images/Tears for Fears.png"),
+  twitter: url("../images/Twitter.png"),
+  vogts-villa: url("../images/Vogts Villa.png"),
+  wild-seed: url("../images/Wild Seed.png"),
+);
+
+$subscribes: free, standard, premium;
+
+$socials: google, twitter, facebook, instagram;
+$icon-size: (
+  google: (
+    26px 17px,
+  ),
+  twitter: (
+    22px 19px,
+  ),
+  facebook: (
+    12px 20px,
+  ),
+  instagram: (
+    19px 20px,
+  ),
+);

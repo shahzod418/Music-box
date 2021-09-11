@@ -1,0 +1,76 @@
+@import "style-atom";
+@import "variables";
+
+@mixin page-pricing {
+  #page-pricing {
+    @include ta-center;
+
+    color: $color-white;
+    padding-top: 100px;
+
+    h2 {
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      @include uppercase;
+
+      margin-bottom: 200px;
+    }
+  }
+
+  .pricing-catalog {
+    @include flex-container;
+
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+
+  .pricing-item {
+    @include flex-container;
+    @include flex-align-items;
+
+    border-radius: 1rem;
+    box-sizing: border-box;
+    flex: 1 1 366px;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    vertical-align: center;
+  }
+
+  .pricing-value {
+    @include flex-container;
+    @include uppercase;
+
+    font-size: $fs-price;
+    margin-bottom: 40px;
+    padding: 0;
+
+    span {
+      display: block;
+      font-size: $fs-span;
+      margin-left: 16px;
+      padding-top: 16px;
+    }
+  }
+
+  .pricing-footer {
+    @include ta-center;
+
+    font-size: $fs-pricing-footer;
+    margin: 64px 0;
+  }
+
+  .footnote {
+    font-size: $fs-footnote;
+    margin-top: 40px;
+  }
+
+  @each $subscribe in $subscribes {
+    .bg-#{$subscribe} {
+      @include bg-subscription;
+
+      background-image: map-get($img, #{$subscribe});
+    }
+  }
+}
