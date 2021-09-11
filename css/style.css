@@ -271,12 +271,11 @@ header span {
   line-height: 16.5px;
   color: #ffffff;
 }
-.navigation-header a:active {
-  opacity: 0.8;
-}
 .navigation-header a:hover {
   color: #ffffff;
-  font-size: 11px;
+}
+.navigation-header a:active {
+  opacity: 0.8;
 }
 
 .navigation-block {
@@ -332,6 +331,8 @@ header span {
 #page-description form input[type=submit] {
   border: 0;
   text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background-color: #34c176;
   border-radius: 5px;

@@ -75,6 +75,8 @@
 
     @include btn-active;
 
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: $color-green;
     border-radius: 5px;

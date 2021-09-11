@@ -21,16 +21,15 @@
   @include uppercase;
   @include td-none;
 
-  @include btn-active;
-
   color: $color-grey;
   font-size: $fs-li-a-desktop;
   line-height: $lh-li-a;
 
   &:hover {
     color: $color-white;
-    font-size: $fs-li-a-hover;
   }
+
+  @include btn-active;
 }
 
 @mixin header-desktop {
